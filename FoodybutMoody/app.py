@@ -4,8 +4,8 @@ from azure.cognitiveservices.vision.face import FaceClient
 from msrest.authentication import CognitiveServicesCredentials
 
 
-KEY = "bb71dc93bc25491fb91041cf74f9f4d4"
-ENDPOINT = "https://ok-try-2.cognitiveservices.azure.com/"
+KEY = "(key)"
+ENDPOINT = "(endpoint)"
 face_client = FaceClient(ENDPOINT, CognitiveServicesCredentials(KEY))
 
 
