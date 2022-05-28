@@ -1,7 +1,8 @@
 # Health++
 
 Health++ is an app which uses opencv and other machine learning based algorithms to provide the following features .<br>
-It is deployed on streamlit cloud.
+It is deployed on streamlit cloud.<br>
+Link to the deployed app : https://share.streamlit.io/uk1106/repo2/main/app.py
 
 ## Installation 
 
