@@ -11,3 +11,11 @@ Frontend = HTML , CSS , JS
 
 Various articles were used for providing appropriate food recommendations .
 
+## Installation 
+
+```pip install -r requirements.txt```
+
+app.py -> flask code 
+templates -> html , css template 
+
+
