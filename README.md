@@ -8,7 +8,6 @@ Backend = Flask
 Frontend = HTML , CSS , JS 
 
 Articles referrred for recommending food:
-
-[Article](https://health.clevelandclinic.org/bad-mood-look-to-your-food/#:~:text=Food%20and%20your%20mood&text=Protein%20consumption%20(from%20foods%20like,your%20mood%2C%20motivation%20and%20concentration.)
+[here](https://health.clevelandclinic.org/bad-mood-look-to-your-food/#:~:text=Food%20and%20your%20mood&text=Protein%20consumption%20(from%20foods%20like,your%20mood%2C%20motivation%20and%20concentration.)
 
 [Article][
