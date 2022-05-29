@@ -46,6 +46,18 @@ Usage of KNN , SVC , Decision tree and random forest for prediction of BP , Diab
  app 2 file -> code <br>
  Usage of KNN , SVC , Logistic Regression , Decision tree , Random forest , Naive Bayes etc for prediction of Mental health .<br>
  
+ ## Covid 19 Detection 
+ 
+ Usage of Opencv to detect images and convolution neural network to detect the presence of covid 19 .<br>
+ app4 -> code
+ 
+ ## Cancer detection 
+ 
+  Usage of Opencv to detect images and convolution neural network to detect the presence of cancerous lesions .<br>
+ app6 -> code
+ 
+ 
+ 
  
 
 
