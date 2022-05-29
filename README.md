@@ -4,10 +4,10 @@ As we are aware of the fact that nutrients present in the food can influence bra
 
 Usage of Microsoft azure face api for face detection and emotion recognition .<br>
 
+Deployed using microsoft azure services here : https://foodybutmoody.azurewebsites.net/
+
 Backend = Flask 
 Frontend = HTML , CSS , JS 
 
-Articles referrred for recommending food:
-[here](https://health.clevelandclinic.org/bad-mood-look-to-your-food/#:~:text=Food%20and%20your%20mood&text=Protein%20consumption%20(from%20foods%20like,your%20mood%2C%20motivation%20and%20concentration.)
+Various articles were used for providing appropriate food recommendations .
 
-[Article][
