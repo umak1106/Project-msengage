@@ -17,6 +17,5 @@ Various articles were used for providing appropriate food recommendations .
 
 app.py -> flask code 
 
-templates -> html , css template 
 
 
