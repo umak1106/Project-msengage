@@ -13,49 +13,30 @@ def gen_frames():
     scale = 2
     H = 480 // scale
     W = 640 // scale
-
-
     up = 160 // scale #Defined boundaries
     down = 320 // scale
     left = 200 // scale
     right = 440 // scale
-
     pyautogui.PAUSE = 0.0
-
-    # wait sometime until next movement is registered
     wait_time = 0.01
-    start = end = 0
-
-    # total number of frames processed thus far and skip frames
+    start = end = 0  
     totalFrames = 0
     skip_frames = 50
-
-    # loop indefinitely
+   
     while True:
-
         frame = vs.read()
         frame = cv2.flip(frame, 1)
         frame = imutils.resize(frame, width=W)
-
-        # initialize the action
         action = None
-
         # Run the face detector to find or update face position
         if tracker is None or totalFrames % skip_frames == 0:
 
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-
             # Detect all faces
             faces = detector.detectMultiScale(gray, scaleFactor=1.05,
                                               minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE)
-
-            # Check to see if a face was found
             if len(faces) > 0:
-
-                # Pick the most prominent face
                 initBB = faces[0]
-
-                # start the tracker
                 tracker = cv2.legacy_TrackerKCF.create()
                 tracker.init(frame, tuple(initBB))
             else:
