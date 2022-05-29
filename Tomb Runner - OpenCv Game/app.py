@@ -4,7 +4,15 @@ import cv2
 import imutils
 from imutils.video import VideoStream
 import pyautogui
+
 app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+
+
 
 def gen_frames():
     detector = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
@@ -13,16 +21,16 @@ def gen_frames():
     scale = 2
     H = 480 // scale
     W = 640 // scale
-    up = 160 // scale #Defined boundaries
+    up = 160 // scale  # Defined boundaries
     down = 320 // scale
     left = 200 // scale
     right = 440 // scale
     pyautogui.PAUSE = 0.0
     wait_time = 0.01
-    start = end = 0  
+    start = end = 0
     totalFrames = 0
     skip_frames = 50
-   
+
     while True:
         frame = vs.read()
         frame = cv2.flip(frame, 1)
@@ -36,9 +44,9 @@ def gen_frames():
             faces = detector.detectMultiScale(gray, scaleFactor=1.05,
                                               minNeighbors=5, minSize=(30, 30), flags=cv2.CASCADE_SCALE_IMAGE)
             if len(faces) > 0:
-                initBB = faces[0]
+                i = faces[0]
                 tracker = cv2.legacy_TrackerKCF.create()
-                tracker.init(frame, tuple(initBB))
+                tracker.init(frame, tuple(i))
             else:
                 tracker = None
 
@@ -50,7 +58,6 @@ def gen_frames():
             # if tracking was successful, draw the center point
             if success:
                 (x, y, w, h) = [int(v) for v in box]
-
 
                 centerX = int(x + (w / 2.0))
                 centerY = int(y + (h / 2.0))
@@ -75,10 +82,8 @@ def gen_frames():
         end = time.time()
 
         if action is not None and end - start > wait_time:
-
             pyautogui.press(action)
             start = time.time()
-
 
         cv2.line(frame, (0, up), (W, up), (255, 255, 255), 2)  # UP
         cv2.line(frame, (0, down), (W, down), (255, 255, 255), 2)  # DOWN
@@ -97,10 +102,6 @@ def gen_frames():
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
 
 
-
-@app.route('/')
-def index():
-    return render_template('index.html')
 
 
 
