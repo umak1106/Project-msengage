@@ -10,6 +10,8 @@ For more information go to  Health++ folder [here](https://github.com/umak1106/P
 
 Deployed here : https://share.streamlit.io/uk1106/repo2/main/app.py
 
+Uk1106 is my 2nd github account.
+
 ### Foody But Moody 
 
 An application to predict food on the basis of mood .
