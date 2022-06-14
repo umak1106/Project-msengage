@@ -57,7 +57,7 @@ Usage of KNN , SVC , Decision tree and random forest for prediction of BP , Diab
  app6 -> code
  
  
- 
+ Youtube video : https://youtu.be/bxj8zvXX11Q
  
 
 
